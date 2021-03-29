@@ -1,0 +1,15 @@
+current directory: /Users/mk/WT-backend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/Users/mk/.rbenv/versions/2.6.3/bin/ruby -I /Users/mk/.rbenv/versions/2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210329-40971-mayifp.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mk/WT-backend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/mk/WT-backend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/mk/WT-backend/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make DESTDIR\= install
+/usr/local/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20210329-40971-dcobr0
