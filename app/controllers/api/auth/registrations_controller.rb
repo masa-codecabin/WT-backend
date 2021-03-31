@@ -3,7 +3,7 @@ module Api
     class RegistrationsController < DeviseTokenAuth::RegistrationsController
       private
       def sign_up_params
-        params.require(:registration).permit(:name, :email, :uid, :password, :password_confirmation)
+        params.require(:registration).permit(:name, :email, :password, :password_confirmation)
       end
       def account_update_params
         params.permit(:name, :email)
