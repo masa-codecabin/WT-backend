@@ -6,9 +6,10 @@ Rails.application.routes.draw do
     }
 
     namespace :v1 do
-      resources :users do
-        resources :monitoring_settings
-      end
+      resources :users
+      resources :monitoring_settings
+      resources :attempts, only: :create
+      resources :user_and_monitoring_settings
     end
   end
 end

@@ -1,5 +1,4 @@
 class Api::V1::MonitoringSettingsController < ApplicationController
-  protect_from_forgery
 
   def index
   end
@@ -10,7 +9,7 @@ class Api::V1::MonitoringSettingsController < ApplicationController
   def create
     monitoring_setting = MonitoringSetting.new(monitoring_setting_params)
     if monitoring_setting.save
-      render json: monitoring_setting, status: :created, location: users_path(current_user)
+      render json: monitoring_setting, status: :created
     else
       render json: monitoring_setting.errors, status: :unprocessable_entity
     end
@@ -38,11 +37,11 @@ class Api::V1::MonitoringSettingsController < ApplicationController
   private
 
     def monitoring_setting_params
-      params.require(:monitoring_setting).permit(:url, :verification_timing, :user_id)
+      params.permit(:url, :verification_timing, :user_id)
     end
 
     def update_monitoring_setting_params
-      params.require(:monitoring_setting).permit(:url, :verification_timing)
+      params.permit(:url, :verification_timing)
     end
 
 end
