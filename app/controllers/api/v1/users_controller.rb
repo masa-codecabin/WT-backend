@@ -1,11 +1,10 @@
 class Api::V1::UsersController < ApplicationController
-  protect_from_forgery
-  before_action :set_user, only: [:show, :update, :destroy]
+  # before_action :set_user, only: [:show, :update, :destroy]
 
   def index
     begin
       users = User.all
-      render json: {:success => true, :users => users}
+      render json: users
     rescue StandardError => error
       render json: {:success => false, :msg => error.message}
     end
@@ -13,7 +12,8 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     begin
-      monitoring_settings = MonitoringSetting.where(user_id: current_user)
+      user = User.find(params[:id])
+      monitoring_settings = MonitoringSetting.where(user_id: current_api_user)
       verification_timing = { every_10minutes: "10minutes", every_hour: "hour", every_3hours: "3hours" }
       render json: {:success => true, :user => user, :monitoring_settings => monitoring_settings, :verification_timing => verification_timing}
     rescue StandardError => error
