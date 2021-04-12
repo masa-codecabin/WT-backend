@@ -10,7 +10,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 gem 'devise_token_auth'
-gem 'devise_invitable'
+gem 'devise_invitable' #Automatically create invitation functions.
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -24,6 +24,7 @@ gem 'devise_invitable'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'whenever', require: false
+gem 'roo'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'

@@ -34,6 +34,10 @@ class Api::V1::MonitoringSettingsController < ApplicationController
     end
   end
 
+  def import_csv
+    MonitoringSetting.import(params[:file])
+  end
+
   private
 
     def monitoring_setting_params
