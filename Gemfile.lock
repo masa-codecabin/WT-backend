@@ -70,7 +70,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise_invitable (2.0.3)
+    devise_invitable (2.0.4)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     devise_token_auth (1.1.5)
@@ -115,6 +115,7 @@ GEM
     nokogiri (1.11.3)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    oauth (0.5.6)
     oauth2 (1.4.7)
       faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
@@ -131,9 +132,15 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.1)
       omniauth-oauth2 (>= 1.6)
+    omniauth-oauth (1.2.0)
+      oauth
+      omniauth (>= 1.0, < 3)
     omniauth-oauth2 (1.7.1)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
     pg (0.20.0)
     puma (4.3.7)
@@ -213,7 +220,6 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
-  devise
   devise_invitable
   devise_token_auth
   dotenv-rails
@@ -221,6 +227,7 @@ DEPENDENCIES
   omniauth (= 1.9.1)
   omniauth-facebook
   omniauth-google-oauth2
+  omniauth-twitter
   pg (= 0.20.0)
   puma (~> 4.1)
   rack-cors
